@@ -11,14 +11,11 @@ request(URL, (error, response, body) => {
       return;
     }
   });
-
   fs.readFile(localFilePath, 'utf-8', (error, data) => {
     const len = data.length;
     if(!error) console.log(`Downloaded and saved ${len} bytes to ${localFilePath} `);
   });
-
   if (error) {
     console.log(error);
   }
-
 });
